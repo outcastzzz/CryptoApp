@@ -3,36 +3,34 @@ package com.example.cryptoapp.data.repository
 import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.Transformations
 import androidx.work.ExistingWorkPolicy
 import androidx.work.WorkManager
 import com.example.cryptoapp.data.databse.AppDatabase
+import com.example.cryptoapp.data.databse.CoinInfoDao
 import com.example.cryptoapp.data.mapper.CoinMapper
 import com.example.cryptoapp.data.workers.RefreshDataWorker
 import com.example.cryptoapp.domain.CoinInfo
 import com.example.cryptoapp.domain.CoinRepository
+import javax.inject.Inject
 
-class CoinRepositoryImpl(
+class CoinRepositoryImpl @Inject constructor(
+    private val mapper: CoinMapper,
+    private val coinInfoDao: CoinInfoDao,
     private val application: Application
 ) : CoinRepository {
 
-    private val coinInfoDao = AppDatabase.getInstance(application).coinPriceInfoDao()
-    private val mapper = CoinMapper()
-
     override fun getCoinInfoList(): LiveData<List<CoinInfo>> {
-        return MediatorLiveData<List<CoinInfo>>().apply {
-            addSource(coinInfoDao.getPriceList()) {
-                it.map {
-                    mapper.mapDbModelToEntity(it)
-                }
+        return Transformations.map(coinInfoDao.getPriceList()) {
+            it.map {
+                mapper.mapDbModelToEntity(it)
             }
         }
     }
 
     override fun getCoinInfo(fromSymbol: String): LiveData<CoinInfo> {
-        return MediatorLiveData<CoinInfo>().apply {
-            addSource(coinInfoDao.getPriceInfoAboutCoin(fromSymbol)) {
-                mapper.mapDbModelToEntity(it)
-            }
+        return Transformations.map(coinInfoDao.getPriceInfoAboutCoin(fromSymbol)) {
+            mapper.mapDbModelToEntity(it)
         }
     }
 
