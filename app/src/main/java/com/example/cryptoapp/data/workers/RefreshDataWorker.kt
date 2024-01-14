@@ -1,6 +1,7 @@
 package com.example.cryptoapp.data.workers
 
 import android.content.Context
+import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.ListenableWorker
 import androidx.work.OneTimeWorkRequest
@@ -29,7 +30,7 @@ class RefreshDataWorker(
                 val coinInfoDtoList = mapper.mapJsonContainerToListCoinInfo(jsonContainer)
                 val dbModelList = coinInfoDtoList.map { mapper.mapDtoToDbModel(it) }
                 coinInfoDao.insertPriceList(dbModelList)
-            } catch (e: Exception) {
+            } catch (_: Exception) {
             }
             delay(10000)
         }

@@ -1,6 +1,7 @@
 package com.example.cryptoapp.presentation.adapters
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -8,6 +9,7 @@ import com.example.cryptoapp.R
 import com.example.cryptoapp.databinding.ItemCoinInfoBinding
 import com.example.cryptoapp.domain.CoinInfo
 import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
 
 class CoinInfoAdapter(
     private val context: Context

@@ -1,0 +1,37 @@
+-dontwarn android.**
+-dontwarn com.google.android.gms.**
+-keep class com.yourpackage.** { *; }
+-keep interface com.yourpackage.** { *; }
+-keep class com.yourpackage.**$* { *; }
+-keep class com.yourpackage.**$*$* { *; }
+-keep class com.yourpackage.**$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
+-keep class com.yourpackage.**$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$* { *; }
