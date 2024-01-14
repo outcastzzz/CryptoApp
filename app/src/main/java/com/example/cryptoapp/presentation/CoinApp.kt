@@ -6,7 +6,7 @@ import com.example.cryptoapp.data.workers.CoinWorkerFactory
 import com.example.cryptoapp.di.DaggerApplicationComponent
 import javax.inject.Inject
 
-class CoinApp: Application(), Configuration.Provider {
+class CoinApp : Application(), Configuration.Provider {
 
     @Inject
     lateinit var workerFactory: CoinWorkerFactory
@@ -21,9 +21,8 @@ class CoinApp: Application(), Configuration.Provider {
         super.onCreate()
     }
 
-    override fun getWorkManagerConfiguration(): Configuration {
-        return Configuration.Builder()
+    override val workManagerConfiguration: Configuration
+        get() = Configuration.Builder()
             .setWorkerFactory(workerFactory)
             .build()
-    }
 }
