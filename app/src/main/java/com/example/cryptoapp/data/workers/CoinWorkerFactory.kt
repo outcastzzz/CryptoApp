@@ -1,6 +1,7 @@
 package com.example.cryptoapp.data.workers
 
 import android.content.Context
+import android.util.Log
 import androidx.work.ListenableWorker
 import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
@@ -16,8 +17,10 @@ class CoinWorkerFactory @Inject constructor(
         workerClassName: String,
         workerParameters: WorkerParameters
     ): ListenableWorker? {
+        Log.d("WorkerFactoryTag", "done1")
         return when(workerClassName) {
             RefreshDataWorker::class.qualifiedName -> {
+                Log.d("WorkerFactoryTag", "done")
                 val childWorkerFactory = workerProviders[RefreshDataWorker::class.java]?.get()
                 return childWorkerFactory?.create(appContext, workerParameters)
             }
